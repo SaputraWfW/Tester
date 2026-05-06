@@ -1,11 +1,35 @@
+    <?php
+include "koneksi.php";
+$id = $_GET['id'];
+$sql = mysqli_query($conn, "SELECT * FROM categories WHERE id = '$id'");
+$hasil = mysqli_fetch_array($sql);
+if (isset($_POST['update'])) {
+
+    $nm_kat = $_POST['nm_kat'];
+
+    $query = mysqli_query($conn, "UPDATE categories SET category_name = '$nm_kat' WHERE id='$id'");
+    if ($query) {
+        echo "<script>alert('Data berhasil diubah!')</script>";
+        header("refresh:0, kategori_produk.php");
+    } else {
+        echo "<script>alert('Data gagal diubah!')</script>";
+        header("refresh:0, kategori_produk.php");
+    }
+}
+?>
+    
+    
+    
     <!DOCTYPE html>
     <html lang="en">
+
+    
 
     <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Kategori Produk - Nama Sistem</title>
+    <title>Kategori Produk - inventory25550016</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -29,13 +53,7 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <!-- =======================================================
-    * Template Name: NiceAdmin
-    * Updated: Sep 18 2023 with Bootstrap v5.3.2
-    * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
+    
     </head>
 
     <body>
@@ -44,7 +62,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
+        <a href="index.php" class="logo d-flex align-items-center">
             <img src="assets/img/logo.png" alt="">
             <span class="d-none d-lg-block">NiceAdmin</span>
         </a>
@@ -65,7 +83,7 @@
 
             <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                 <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-                <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+                
             </a><!-- End Profile Iamge Icon -->
 
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -175,68 +193,62 @@
         <nav>
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-            <li class="breadcrumb-item active">Kaegori Produk</li>
+            <li class="breadcrumb-item active">Kategori Produk</li>
             
             </ol>
         </nav>
         </div><!-- End Page Title -->
+        <div class="row">
+            <div class="col-lg-12">
+
+            <div class="card">
+                <div class="card-body mt-3">
+                  <a href="t_kat.php" class="btn btn-primary">Tambah Data</a>                              
+                </div>
+              </div>
+            </div>
+        </div>
+
 
         <section class="section">
         <div class="row">
             <div class="col-lg-12">
 
             <div class="card">
-                <div class="card-body">
-                <h5 class="card-title">Datatables</h5>
-                <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+                <div class="card-body mt-3">
+                    
+                
 
                 <!-- Table with stripped rows -->
                 <table class="table datatable">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Position</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Start Date</th>
-                    </tr>
+                    <thead>                                                             
+                     <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Kode Kategori</th>
+                      <th scope="col">Kategori Produk</th>
+                      <th scope="col">Aksi</th>                    
+                     </tr>
+                  
                     </thead>
                     <tbody>
+                          <?php
+                  include "koneksi.php";
+                  $no = 1;
+                  $sql = mysqli_query($conn, "SELECT * FROM categories");
+                  while ($data = mysqli_fetch_array($sql)) {
+                  ?>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Brandon Jacob</td>
-                        <td>Designer</td>
-                        <td>28</td>
-                        <td>2016-05-25</td>
+                      <td><?php echo $no++; ?></td>
+                      <td><?php echo $data['kd_kat']; ?></td>
+                      <td><?php echo $data['category_name']; ?></td>
+                      <td>
+                        <a href="e_kat.php?id=<?php echo $data['id']; ?>" class="btn btn-warning">Edit</a>
+                        <a href="h_kat.php?id=<?php echo $data['id']; ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data?')">Hapus</a>
+                      </td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Bridie Kessler</td>
-                        <td>Developer</td>
-                        <td>35</td>
-                        <td>2014-12-05</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Ashleigh Langosh</td>
-                        <td>Finance</td>
-                        <td>45</td>
-                        <td>2011-08-12</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Angus Grady</td>
-                        <td>HR</td>
-                        <td>34</td>
-                        <td>2012-06-11</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Raheem Lehner</td>
-                        <td>Dynamic Division Officer</td>
-                        <td>47</td>
-                        <td>2011-04-19</td>
-                    </tr>
+                  <?php } ?>
+                        
+                    
                     </tbody>
                 </table>
                 <!-- End Table with stripped rows -->
