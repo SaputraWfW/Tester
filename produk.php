@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Produk - Nama Sistem</title>
+    <title>Produk - inventory25550016</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -29,13 +29,7 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <!-- =======================================================
-    * Template Name: NiceAdmin
-    * Updated: Sep 18 2023 with Bootstrap v5.3.2
-    * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
+   
     </head>
 
     <body>
@@ -43,129 +37,74 @@
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
 
-        <div class="d-flex align-items-center justify-content-between">
-        <a href="index.php" class="logo d-flex align-items-center">
-            <img src="assets/img/logo.png" alt="">
-            <span class="d-none d-lg-block">NiceAdmin</span>
-        </a>
-        <i class="bi bi-list toggle-sidebar-btn"></i>
-        </div><!-- End Logo -->
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.php" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">inventory25550016</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
 
-    
-        <nav class="header-nav ms-auto">
-        <ul class="d-flex align-items-center">
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
 
-            
+        <li class="nav-item dropdown pe-3">
 
-        
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+          </a><!-- End Profile Iamge Icon -->
 
-            
+        </li><!-- End Profile Nav -->
 
-            <li class="nav-item dropdown pe-3">
+      </ul>
+    </nav><!-- End Icons Navigation -->
 
-            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-                <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-            </a><!-- End Profile Iamge Icon -->
-
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                <li class="dropdown-header">
-                <h6>Kevin Anderson</h6>
-                <span>Web Designer</span>
-                </li>
-                <li>
-                <hr class="dropdown-divider">
-                </li>
-
-                <li>
-                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                    <i class="bi bi-person"></i>
-                    <span>My Profile</span>
-                </a>
-                </li>
-                <li>
-                <hr class="dropdown-divider">
-                </li>
-
-                <li>
-                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                    <i class="bi bi-gear"></i>
-                    <span>Account Settings</span>
-                </a>
-                </li>
-                <li>
-                <hr class="dropdown-divider">
-                </li>
-
-                <li>
-                <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                    <i class="bi bi-question-circle"></i>
-                    <span>Need Help?</span>
-                </a>
-                </li>
-                <li>
-                <hr class="dropdown-divider">
-                </li>
-
-                <li>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                    <i class="bi bi-box-arrow-right"></i>
-                    <span>Sign Out</span>
-                </a>
-                </li>
-
-            </ul><!-- End Profile Dropdown Items -->
-            </li><!-- End Profile Nav -->
-
-        </ul>
-        </nav><!-- End Icons Navigation -->
-
-    </header><!-- End Header -->
+  </header><!-- End Header -->
 
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
 
-        <ul class="sidebar-nav" id="sidebar-nav">
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="index.php">
+         	<i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="kategori_produk.php">
+          <i class="bi bi-tags"></i>
+          <span>Kategori Produk</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
 
         <li class="nav-item">
-            <a class="nav-link " href="index.php">
-                <i class="bi bi-grid"></i>
-            <span>Dashboard</span>
-            </a>
-        </li><!-- End Dashboard Nav -->
+        <a class="nav-link " href="produk.php">
+          <i class="bi bi-box"></i>
+          <span>Data Produk</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
 
         <li class="nav-item">
-            <a class="nav-link " href="kategori_produk.php">
-            <i class="bi bi-tags"></i>
-            <span>Kategori Produk</span>
-            </a>
-        </li><!-- End Dashboard Nav -->
+        <a class="nav-link collapsed" href="laporan.php">
+          <i class="bi bi-file-text"></i>
+          <span>Laporan</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
 
+        <li class="nav-item">
+        <a class="nav-link collapsed" href="users.php">
+          <i class="bi bi-people"></i>
+          <span>Manajemen User</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+    </ul>
 
-            <li class="nav-item">
-            <a class="nav-link " href="produk.php">
-            <i class="bi bi-box"></i>
-            <span>Data Produk</span>
-            </a>
-        </li><!-- End Dashboard Nav -->
-
-
-            <li class="nav-item">
-            <a class="nav-link " href="laporan.php">
-            <i class="bi bi-file-text"></i>
-            <span>Laporan</span>
-            </a>
-        </li><!-- End Dashboard Nav -->
-
-            <li class="nav-item">
-            <a class="nav-link " href="users.php">
-            <i class="bi bi-people"></i>
-            <span>Manajemen User</span>
-            </a>
-        </li><!-- End Dashboard Nav -->
-        </ul>
-
-    </aside><!-- End Sidebar-->
+  </aside><!-- End Sidebar-->
 
 
     <main id="main" class="main">
@@ -182,71 +121,72 @@
         </div><!-- End Page Title -->
 
         <section class="section">
-        <div class="row">
-            <div class="col-lg-12">
+            <div class="row">
+                        <div class="col-lg-12">
 
-            <div class="card">
-                <div class="card-body">
-                <h5 class="card-title">Data Produk</h5>
-                <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+                            <div class="card">
+                                <div class="card-body mt-3">
+                                    <a href="t_produk.php" class="btn btn-primary">Tambah Data</a>
+                                    <a href="stok.php" class="btn btn-dark">Stok</a>
+                                </div>
+                            </div>
 
-                <!-- Table with stripped rows -->
-                <table class="table datatable">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Position</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Start Date</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Brandon Jacob</td>
-                        <td>Designer</td>
-                        <td>28</td>
-                        <td>2016-05-25</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Bridie Kessler</td>
-                        <td>Developer</td>
-                        <td>35</td>
-                        <td>2014-12-05</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Ashleigh Langosh</td>
-                        <td>Finance</td>
-                        <td>45</td>
-                        <td>2011-08-12</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Angus Grady</td>
-                        <td>HR</td>
-                        <td>34</td>
-                        <td>2012-06-11</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Raheem Lehner</td>
-                        <td>Dynamic Division Officer</td>
-                        <td>47</td>
-                        <td>2011-04-19</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <!-- End Table with stripped rows -->
+                        </div>
+                    </div>
 
                 </div>
             </div>
+        </section>
+        <div class="card">
+            <div class="card-body">
+                <table class="table datatable">
+                    <thead>   
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Kode Produk</th>
+                            <th scope="col">Nama Produk</th>
+                            <th scope="col">Kategori</th>
+                            <th scope="col">Stok</th>
+                            <th scope="col">Harga</th>
+                            <th scope="col">Gambar</th>
+                            <th scope="col">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        include "koneksi.php";
+                        $no = 1;
 
+                        // Ambil data produk + nama kategori menggunakan LEFT JOIN
+                        $sql = mysqli_query($conn, "
+                            SELECT p.*, c.category_name 
+                            FROM products p 
+                            LEFT JOIN categories c ON p.category_id = c.id
+                        ");
+
+                        while ($data = mysqli_fetch_array($sql)) {
+                        ?>
+                            <tr>
+                                <td><?php echo $no++; ?></td>
+                                <td><?php echo $data['product_code']; ?></td>
+                                <td><?php echo $data['product_name']; ?></td>
+                                <td><?php echo $data['category_name']; ?></td>
+                                <td><?php echo $data['stock']; ?></td>
+                                <td>Rp <?php echo number_format($data['price'], 0, ',', '.'); ?></td>
+                                <td>
+                                    <img src="produk_img/<?php echo $data['gambar']; ?>" width="60">
+                                </td>
+                                <td>
+                                    <a href="e_produk.php?id=<?php echo $data['id']; ?>" class="btn btn-warning">Edit</a>
+                                    <a href="h_produk.php?id=<?php echo $data['id']; ?>" class="btn btn-danger" 
+                                    onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data?')">Hapus</a>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
             </div>
         </div>
-        </section>
 
     </main><!-- End #main -->
 

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Users - inventory25550016</title>
+    <title>Manajemen User - Inventory25550016</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -37,139 +37,84 @@
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
 
-        <div class="d-flex align-items-center justify-content-between">
-        <a href="index.php" class="logo d-flex align-items-center">
-            <img src="assets/img/logo.png" alt="">
-            <span class="d-none d-lg-block">NiceAdmin</span>
-        </a>
-        <i class="bi bi-list toggle-sidebar-btn"></i>
-        </div><!-- End Logo -->
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.php" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">inventory25550016</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
 
-    
-        <nav class="header-nav ms-auto">
-        <ul class="d-flex align-items-center">
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
 
-            
+        <li class="nav-item dropdown pe-3">
 
-        
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+          </a><!-- End Profile Iamge Icon -->
 
-            
+        </li><!-- End Profile Nav -->
 
-            <li class="nav-item dropdown pe-3">
+      </ul>
+    </nav><!-- End Icons Navigation -->
 
-            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-                
-            </a><!-- End Profile Iamge Icon -->
-
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                <li class="dropdown-header">
-                <h6>Kevin Anderson</h6>
-                <span>Web Designer</span>
-                </li>
-                <li>
-                <hr class="dropdown-divider">
-                </li>
-
-                <li>
-                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                    <i class="bi bi-person"></i>
-                    <span>My Profile</span>
-                </a>
-                </li>
-                <li>
-                <hr class="dropdown-divider">
-                </li>
-
-                <li>
-                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                    <i class="bi bi-gear"></i>
-                    <span>Account Settings</span>
-                </a>
-                </li>
-                <li>
-                <hr class="dropdown-divider">
-                </li>
-
-                <li>
-                <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                    <i class="bi bi-question-circle"></i>
-                    <span>Need Help?</span>
-                </a>
-                </li>
-                <li>
-                <hr class="dropdown-divider">
-                </li>
-
-                <li>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                    <i class="bi bi-box-arrow-right"></i>
-                    <span>Sign Out</span>
-                </a>
-                </li>
-
-            </ul><!-- End Profile Dropdown Items -->
-            </li><!-- End Profile Nav -->
-
-        </ul>
-        </nav><!-- End Icons Navigation -->
-
-    </header><!-- End Header -->
+  </header><!-- End Header -->
 
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
 
-        <ul class="sidebar-nav" id="sidebar-nav">
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="index.php">
+         	<i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="kategori_produk.php">
+          <i class="bi bi-tags"></i>
+          <span>Kategori Produk</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
 
         <li class="nav-item">
-            <a class="nav-link " href="index.php">
-                <i class="bi bi-grid"></i>
-            <span>Dashboard</span>
-            </a>
-        </li><!-- End Dashboard Nav -->
+        <a class="nav-link collapsed" href="produk.php">
+          <i class="bi bi-box"></i>
+          <span>Data Produk</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
 
         <li class="nav-item">
-            <a class="nav-link " href="kategori_produk.php">
-            <i class="bi bi-tags"></i>
-            <span>Kategori Produk</span>
-            </a>
-        </li><!-- End Dashboard Nav -->
+        <a class="nav-link collapsed" href="laporan.php">
+          <i class="bi bi-file-text"></i>
+          <span>Laporan</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
 
+        <li class="nav-item">
+        <a class="nav-link " href="users.php">
+          <i class="bi bi-people"></i>
+          <span>Manajemen User</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+    </ul>
 
-            <li class="nav-item">
-            <a class="nav-link " href="produk.php">
-            <i class="bi bi-box"></i>
-            <span>Data Produk</span>
-            </a>
-        </li><!-- End Dashboard Nav -->
-
-
-            <li class="nav-item">
-            <a class="nav-link " href="laporan.php">
-            <i class="bi bi-file-text"></i>
-            <span>Laporan</span>
-            </a>
-        </li><!-- End Dashboard Nav -->
-
-            <li class="nav-item">
-            <a class="nav-link " href="users.php">
-            <i class="bi bi-people"></i>
-            <span>Manajemen User</span>
-            </a>
-        </li><!-- End Dashboard Nav -->
-        </ul>
-
-    </aside><!-- End Sidebar-->
+  </aside><!-- End Sidebar-->
 
 
     <main id="main" class="main">
 
         <div class="pagetitle">
-        <h1>Produk</h1>
+        <h1>Manajemen User</h1>
         <nav>
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-            <li class="breadcrumb-item active">Produk</li>
+            <li class="breadcrumb-item active">Manajemen User</li>
             
             </ol>
         </nav>
@@ -181,7 +126,7 @@
 
             <div class="card">
                 <div class="card-body">
-                <h5 class="card-title">Datatables</h5>
+                <h5 class="card-title">Manajemen User</h5>
                 <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
 
                 <!-- Table with stripped rows -->
