@@ -240,7 +240,7 @@ if (isset($_POST['simpan'])) {
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Tambah Produk</h5>
+                            <h5 class="Edit produk">Tambah Produk</h5>
 
                             <!-- Vertical Form -->
                             <form class="row g-3" method="post" enctype="multipart/form-data">
