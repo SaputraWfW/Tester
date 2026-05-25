@@ -1,4 +1,15 @@
 <?php
+session_start();
+include "koneksi.php";
+
+// Cek apakah user sudah login
+if (!isset($_SESSION["login"])) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
+<?php
 session_start(); // Wajib untuk mengambil data user_id dari session
 include "koneksi.php";
 
@@ -47,7 +58,7 @@ if (isset($_POST['submit'])) {
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Manajemen Stok - inventory25550016</title>
+  <title>Manajemen Stok - Berkatti</title>
 
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -77,7 +88,7 @@ if (isset($_POST['submit'])) {
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.php" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">inventory25550016</span>
+        <span class="d-none d-lg-block">Berkatti</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div>
@@ -85,9 +96,27 @@ if (isset($_POST['submit'])) {
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
         <li class="nav-item dropdown pe-3">
+          
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle" />
           </a>
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6><?php echo isset($_SESSION['name']) ? $_SESSION['name'] : 'User'; ?></h6>
+              <span><?php echo isset($_SESSION['role']) ? $_SESSION['role'] : 'Role'; ?></span>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="logout.php">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+          </ul>
+
         </li>
       </ul>
     </nav>
@@ -212,7 +241,7 @@ if (isset($_POST['submit'])) {
 
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; 2026 <strong><span>inventory25550016</span></strong>
+      &copy; 2026 <strong><span>Reno Saputra</span></strong>
     </div>
   </footer>
 

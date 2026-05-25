@@ -1,4 +1,15 @@
 <?php
+session_start();
+include "koneksi.php";
+
+// Cek apakah user sudah login
+if (!isset($_SESSION["login"])) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
+<?php
 include "koneksi.php";
 
 // 1. Logika Pembuatan Kode Produk Otomatis (P001, dst)
@@ -73,7 +84,7 @@ if (isset($_POST['simpan'])) {
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Data Produk - inventory25550016</title>
+    <title>Data Produk - Berkatti</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -107,67 +118,36 @@ if (isset($_POST['simpan'])) {
         <div class="d-flex align-items-center justify-content-between">
             <a href="index.php" class="logo d-flex align-items-center">
                 <img src="assets/img/logo.png" alt="">
-                <span class="d-none d-lg-block">inventory25550016</span>
+                <span class="d-none d-lg-block">Berkatti</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
 
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
+                <li class="nav-item dropdown pe-3">
+                
+                <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                    <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle" />
+                </a>
 
-                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-                    </a><!-- End Profile Iamge Icon -->
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                    <li class="dropdown-header">
+                    <h6><?php echo isset($_SESSION['name']) ? $_SESSION['name'] : 'User'; ?></h6>
+                    <span><?php echo isset($_SESSION['role']) ? $_SESSION['role'] : 'Role'; ?></span>
+                    </li>
+                    <li>
+                    <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                    <a class="dropdown-item d-flex align-items-center" href="logout.php">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <span>Sign Out</span>
+                    </a>
+                    </li>
+                </ul>
 
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                        <li class="dropdown-header">
-                            <h6>Kevin Anderson</h6>
-                            <span>Web Designer</span>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                                <i class="bi bi-person"></i>
-                                <span>My Profile</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                                <i class="bi bi-gear"></i>
-                                <span>Account Settings</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                                <i class="bi bi-question-circle"></i>
-                                <span>Need Help?</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
-                                <i class="bi bi-box-arrow-right"></i>
-                                <span>Sign Out</span>
-                            </a>
-                        </li>
-
-                    </ul><!-- End Profile Dropdown Items -->
-                </li><!-- End Profile Nav -->
-
+                </li>
             </ul>
         </nav><!-- End Icons Navigation -->
 
@@ -298,10 +278,10 @@ if (isset($_POST['simpan'])) {
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
-            &copy; Copyright <strong><span>inventory25550016</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>Berkatti</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            Designed by <a href="">Nama Kalian</a>
+            Designed by <a href="">Reno Saputra</a>
         </div>
     </footer><!-- End Footer -->
 
