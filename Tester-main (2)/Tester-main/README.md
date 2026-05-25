@@ -1,2 +1,0 @@
-# Tester
-Test and Practice
